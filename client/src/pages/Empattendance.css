@@ -1,0 +1,85 @@
+/* Sidebar */
+.sidebar {
+    width: 180px;
+    background-color: #f4f4f4;
+    height: 100vh;
+    padding: 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden; /* Ensure no content overflows */
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    width: calc(100% - 200px);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Header */
+.header {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 0;
+}
+
+/* Attendance Table */
+.attendance-table-wrapper {
+    overflow-x: auto; /* Allow horizontal scroll within this wrapper if necessary */
+    width: 100%;
+}
+
+.attendance-table {
+    width: 100%; /* Ensure table occupies the full available width */
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 0; /* Align the table with the content */
+    table-layout: auto; /* Adjust column sizes dynamically */
+}
+
+.attendance-table th,
+.attendance-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word; /* Prevent content overflow */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.attendance-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 120px;
+    }
+
+    .main-content {
+        margin-left: 130px;
+        width: calc(100% - 130px); /* Adjust content width */
+    }
+
+    .attendance-table {
+        font-size: 0.9rem;
+    }
+}
+
+.present-status {
+    color: green; /* Green color for accepted status */
+    font-weight: bold;
+  }
+  
+  /* Style for rejected leave status */
+  .absent-status {
+    color: red; /* Red color for rejected status */
+    font-weight: bold;
+  }

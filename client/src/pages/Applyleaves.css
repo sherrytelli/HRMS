@@ -1,0 +1,150 @@
+.apply-leave-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden; /* Prevent body overflow */
+  }
+  
+  .sidebar {
+    width: 180px;
+    background-color: #f4f4f4;
+    height: 100vh;
+    padding: 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .sidebar .MuiListItemText-root {
+    margin-left: 0px;
+  }
+  
+  .apply-leave-content {
+    flex: 1;
+    padding: 40px;
+    margin-left: 200px; /* Ensure space for sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 110%;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow scroll only for the content part */
+    padding-right: 20px; /* Add some space between the form and the right scrollbar */
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-size: 26px;
+    align-self: flex-start;
+  }
+  
+  .apply-leave-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: calc(100vh - 120px); /* Take full height minus heading and padding */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  select,
+  textarea,
+  input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+  
+  textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  .submit-button {
+    background-color: #2977f5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #205bb5;
+  }
+
+  .error-input {
+    border: 2px solid red;
+    outline: none;
+  }
+  
+  .error-text {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+  }
+  
+
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .apply-leave-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: static;
+      box-shadow: none;
+    }
+  
+    .apply-leave-content {
+      margin-left: 0;
+      padding: 20px;
+      height: auto;
+    }
+  
+    .apply-leave-form {
+      padding: 15px;
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    label {
+      font-size: 14px;
+    }
+  
+    .submit-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  

@@ -1,0 +1,112 @@
+/* Prevent scroll on the whole page */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent vertical scrollbar on the entire page */
+  }
+  
+  .main {
+    display: flex;
+    height: 100%; /* Ensure main takes full height */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scroll on main container */
+  }
+  
+  .sidebar {
+    width: 180px; /* Reduce the width of the sidebar */
+    background-color: #f4f4f4;
+    height: 100vh; /* Full viewport height */
+    padding: 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .sidebar .MuiListItemText-root {
+    margin-left: 0px; /* Adjust margin to bring text closer to icon */
+  }
+  
+  .content {
+    margin-left: 200px; /* Add some space between sidebar and content */
+    padding: 20px;
+    width: calc(100% - 200px); /* Ensure content spans the rest of the width */
+    background-color: #e9f0f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh; /* Ensure content spans full viewport height */
+    overflow: hidden; /* Prevent scrollbars in content */
+  }
+  
+  .details-card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%; /* Take full width available */
+    height: auto; /* Let card height adjust based on content */
+    max-height: calc(100vh - 40px); /* Prevent card height from overflowing */
+    text-align: left;
+    overflow-y: auto; /* Scroll inside the card if needed */
+  }
+  
+  .details-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .details-card p {
+    margin: 10px 0;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .accept-reject-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .accept-button, .reject-button, .back-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accept-button {
+    background-color: #28a745;
+  }
+  
+  .accept-button:hover {
+    background-color: #218838;
+  }
+  
+  .reject-button {
+    background-color: #dc3545;
+  }
+  
+  .reject-button:hover {
+    background-color: #c82333;
+  }
+  
+  .back-button {
+    background-color: #2977f5;
+  }
+  
+  .back-button:hover {
+    background-color: #1f5dc9;
+  }
+  

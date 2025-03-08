@@ -1,0 +1,74 @@
+.sidebar {
+    width: 180px; /* Reduce the width to 180px */
+    background-color: #f4f4f4;
+    height: 100vh; /* Full viewport height */
+    padding: 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar .MuiListItemText-root {
+    margin-left: 0px; /* Adjust margin to bring text closer to icon */
+}
+
+.leaves-page-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw; /* Full width of the screen */
+    margin-left: 180px; /* Leave space for sidebar (match the new sidebar width) */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Make sure main content takes full width */
+.main-content {
+    width: calc(100% - 180px); /* Adjust width to take space after smaller sidebar */
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding doesn’t affect width */
+    margin-left: 8px; /* Add space between sidebar and main content */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Ensure header takes full width */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8px; /* Add space to the left of the table */
+}
+
+/* Make sure table takes the full width */
+.leave-table {
+    width: 99%; /* Full width table */
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 8px; /* Add space to the left of the table */
+}
+
+
+.leave-table th, .leave-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.leave-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.accepted-status {
+    color: green; /* Green color for accepted status */
+    font-weight: bold;
+  }
+  
+  /* Style for rejected leave status */
+  .rejected-status {
+    color: red; /* Red color for rejected status */
+    font-weight: bold;
+  }

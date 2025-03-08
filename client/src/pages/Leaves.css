@@ -1,0 +1,134 @@
+.leave-request-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+  }
+  
+  .sidebar {
+    width: 180px;
+    background-color: #f4f4f4;
+    height: 100vh;
+    padding: 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .sidebar .MuiListItemText-root {
+    margin-left: 0px;
+  }
+  
+  .leave-content {
+    margin-left: 200px; /* Add spacing from the sidebar */
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: flex-start; /* Align header content to the left */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+  }
+  
+  .apply-button {
+    margin-left: auto; /* Push the button to the far right */
+    background-color: #28a745; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .apply-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .leave-history-table-container {
+    display: flex;
+    justify-content: center; /* Center the table horizontally */
+    align-items: center; /* Center the table vertically */
+    width: 100%;
+  }
+  
+  .leave-table {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .leave-table th,
+  .leave-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .leave-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .leave-table tr:hover {
+    background-color: #e9ecef;
+  }
+
+  .accepted-status {
+    color: green; /* Green color for accepted status */
+    font-weight: bold;
+  }
+  
+  /* Style for rejected leave status */
+  .rejected-status {
+    color: red; /* Red color for rejected status */
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .leave-content {
+      margin-left: 0;
+      padding: 10px;
+    }
+  
+    .sidebar {
+      position: static;
+      width: 100%;
+      height: auto;
+      box-shadow: none;
+      padding: 10px 0;
+    }
+  
+    .leave-table {
+      font-size: 14px;
+    }
+  
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .apply-button {
+      margin: 10px 0 0 0;
+      align-self: flex-start;
+    }
+  }
+  

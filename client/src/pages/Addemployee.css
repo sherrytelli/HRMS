@@ -1,0 +1,49 @@
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+    width: 180px; /* Reduce the width to 180px */
+    background-color: #f4f4f4;
+    height: 100vh; /* Full viewport height */
+    padding: 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar .MuiListItemText-root {
+    margin-left: 0px; /* Adjust margin to bring text closer to icon */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* White background for content area */
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for form */
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow around form */
+  margin-left: 180px; /* Adjust this value to shift the form more or less to the right */
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}

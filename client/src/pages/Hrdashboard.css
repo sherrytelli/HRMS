@@ -1,0 +1,50 @@
+.main {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 180px; /* Set sidebar width to 180px */
+    background-color: #f4f4f4;
+    height: 100vh; /* Full viewport height */
+    padding: 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar .MuiListItemText-root {
+    margin-left: 0px; /* Adjust margin to bring text closer to icon */
+}
+
+.content {
+    margin-left: 180px; /* Leave space for sidebar */
+    padding: 20px;
+    width: calc(100% - 180px); /* Adjust width to take the remaining space */
+    background-color: #e9f0f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start */
+    /* height: 100vh; Full height of the viewport */
+}
+
+.dashboard {
+    width: 100%; /* Full content width */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start */
+}
+
+.info-card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%; /* Make the info card take full width */
+    max-width: 600px; /* Set a max width for better presentation */
+    text-align: left;
+}
